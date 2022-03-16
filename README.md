@@ -28,7 +28,7 @@ It can be closed by:
     
 **Notice:** After each time you restart the system, it will automatically be set to active, so you need to turn it off after each restart.
 
-**angr**
+**about angr:**
 For the example solution of symbloc execuation, you need to install angr to run it.
 
 Install instructions can be found at [angr e-book](https://docs.angr.io/introductory-errata/install)
