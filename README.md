@@ -11,14 +11,13 @@ And I tested the symbolic execution part and my solution for it on Ubunto20.04 (
 
 ## Before Start
 
-If you are running a 64bit Linux, to support 32bit programs and 32-bit compiles, you need to do the following set-up.
+If you are running a 64bit Linux, to support 32-bit programs and 32-bit compiles, you need to do the following set-up.
 
     sudo apt-get install build-essential module-assistant 
     sudo apt-get install gcc-multilib g++-multilib
 
     sudo dpkg --add-architecture i386
     sudo apt-get update
-    sudo sh -c "echo 0 > /proc/sys/kernel/randomize_va_space"
 
 ***This is really important:***
 Moden Linux has ASLR (Address Space Layout Randomization). To do a buffer overflow attack, you need to close it.
