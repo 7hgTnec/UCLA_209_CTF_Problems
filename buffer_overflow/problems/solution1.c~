@@ -32,7 +32,7 @@ int main(void)
   //printf("\n%s\n", buff);
 
   if (0 > execve(TARGET, args, env))
-    printf("execve failed.\n");
+    fprintf(stderr, "execve failed.\n");
 
   return 0;
 }

@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
       buf_ptr++;
     }
   buf_ptr++;
-  //printf("%d\n", count);
+  printf("%d\n", count);
   fun1(buf_ptr, count);
 
   return 0;

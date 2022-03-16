@@ -1,6 +1,6 @@
 #!/bin/sh
 
-python3 ./generator.py
+python3 ./generater.py
 
 if [ ! -d "problems" ]; then
   mkdir problems

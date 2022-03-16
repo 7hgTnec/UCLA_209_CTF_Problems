@@ -11,10 +11,10 @@ int fun1(char *argv[])
 
 int main(int argc, char *argv[])
 {
-  printf("target file execuated\n");
+  fprintf(stderr, "target file execuated\n");
   if (argc != 2)
     {
-      printf("requires argc equal to 2\n");
+      fprintf(stderr, "requires argc equal to 2\n");
       exit(-1);
     }
   fun1(argv);
