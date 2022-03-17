@@ -6,8 +6,10 @@ And in the symbolic execution part, I referenced some ideas from [angr_ctf](http
 
 But the example solution was totally make by myself.
 
-I tested buffer overflow problems and my solution for it on Ubuntu 14.04 (32bits).
-And I tested the symbolic execution part and my solution for it on Ubunto20.04 (64bits)
+I tested buffer overflow problems and my solution for it on Ubuntu 14.04 (32-bits).
+And I tested the symbolic execution part and my solution for it on Ubuntu 20.04 (64-bits)
+
+### More details please read Tutorial for UCLA_209_CTF_Problems.pdf
 
 ## Before Start
 
@@ -38,24 +40,26 @@ When you have finished all the above steps, you are ready to start to crack the 
 ## Buffer Overflow
 
 ### How to set up
-Under buffer_overflow folder, there is a `init.sh` shell scrip. You can simply run it to initialize those 2 buffer overflow problems.
+Under buffer_overflow folder, there is a `init.sh` shell scrip. You can simply run it to initialize those 3 buffer overflow problems.
 
 It will ask you to input a username which is used to generate a random seed.
 
 Also, it will ask you to give a permission of sudo, and it is used to execute chmod and chown.
 
-After the script finished, you can see the source code `problem1.c` `problem2.c` under the buffer_overflow folder. 
-And the executable files of these problems can be found in problems folder. Also, you can find my solutions source code and executable files in it.
-A suggestion about building executable files from C is using `gcc -m32 -O0` flags to make it easy to be trackt in gdb or other debuggers.
+After the script finished, you can see the source code problem0.c problem1.c problem2.c under the buffer overflow folder. And the executable files of these problems can be found in problems folder. Also, you can find my solutions source code and executable files in it (the solution for problem0’s input is ”aaaaaaaaaaaaaaaaaaaaeaaa” which is 20 ’a’s and ’eaaa’). 
+
+A suggestion about building executable files from C is using gcc -m32 -O0 flags to make it easy to be tracked in gdb or other debuggers.
+
+And for you reference, I put a useful hex shellcode string in shellcode.h. If you want to use it, you can just include it in your c file.
+
 
 ### Success conditions
+For problem0, if you succeed perform the buffer overflow attack, you will get the flag from problem0’s output in this format: flag{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}. 
 
-If you succeed performed an attack, you will see you have got root  permission. (a '#' in front of the command line, or you can use whoami to see you become root!)
+And for problem1 and problem2, if you succeed perform the attack you will be changed to root user. There is a ’#’ symbol in front of your command line or you can check it by typing ’whoami’ and it should display root. Normally, in real ctf challenge, you need to get the root permission to find some file can only read by root
 
 ### Example solutions
-
-You can just simply run `./solution1` and `solution2` to see the result.
-
+For problem0, you need to run problem0 by moving to /buffer overlfow/problems and run ./problem0. When it ask you to input something, you can input ”aaaaaaaaaaaaaaaaaaaaeaaa” which is 20 ’a’s and ’eaaa’. Then you should get the flag. And for problem1 and problem2, you can just simply run ./solution1 and ./solution2 to see the result.
 
 ## Symbolic Execution
 
