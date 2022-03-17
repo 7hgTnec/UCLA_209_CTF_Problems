@@ -2,9 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import random
-import re
-import shutil
-import sys
+
 
 seed = input("Please input your username: ").upper()
 
@@ -22,9 +20,6 @@ def modifyTarget(num, context):
     ftOut.close()
 
 
-p0_buffer = "BUFFER_P0"
-p0_val = str(random.randrange(61,68))
-
 
 p1_buffer = "BUFFER_P1"
 p1_val = str(100*random.randrange(1,5))
@@ -35,6 +30,5 @@ p2_num_2 = "MAX_STRUCT_P2"
 p2_val_2 = str(512+random.randrange(2,512))
 
 
-modifyTarget("0",[(p0_buffer,p0_val)])
 modifyTarget("1",[(p1_buffer,p1_val)])
 modifyTarget("2",[(p2_num_1,p2_val_1), (p2_num_2,p2_val_2)])
