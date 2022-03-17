@@ -9,7 +9,7 @@ But the example solution was totally make by myself.
 I tested buffer overflow problems and my solution for it on Ubuntu 14.04 (32-bits).
 And I tested the symbolic execution part and my solution for it on Ubuntu 20.04 (64-bits)
 
-### More details please read Tutorial for UCLA_209_CTF_Problems.pdf
+### More details please read [Tutorial for UCLA_209_CTF_Problems.pdf](https://github.com/7hgTnec/UCLA_209_CTF_Problems/blob/main/Tutorial%20for%20UCLA_209_CTF_Problems.pdf)
 
 ## Before Start
 
