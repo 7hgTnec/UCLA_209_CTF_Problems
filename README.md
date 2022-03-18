@@ -20,6 +20,7 @@ If you are running a 64bit Linux, to support 32-bit programs and 32-bit compiles
 
     sudo dpkg --add-architecture i386
     sudo apt-get update
+    sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386
 
 ***This is really important:***
 Moden Linux has ASLR (Address Space Layout Randomization). To do a buffer overflow attack, you need to close it.
